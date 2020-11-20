@@ -31,6 +31,11 @@ CREATE TABLE review (
 )
 
 
+GRANT SELECT, INSERT, UPDATE, DELETE ON review TO projecttwouser;
+GRANT USAGE, SELECT ON SEQUENCE review_review_id_seq TO projecttwouser;
+
+
+
 INSERT INTO category (category_name) VALUES ('Family Movie');
 
 INSERT INTO category (category_name) VALUES ('SuperHero');
@@ -45,9 +50,15 @@ INSERT INTO category (category_name) VALUES ('Documentaries');
 
 
 
-GRANT SELECT, INSERT, UPDATE, DELETE ON review TO projecttwouser;
-GRANT USAGE, SELECT ON SEQUENCE review_review_id_seq TO projecttwouser;
+ALTER TABLE streaming ADD streaming_img VARCHAR(200);
 
+INSERT INTO streaming (streaming_name, streaming_img ) VALUES ('Netflix', '/img/netflix.png');
+
+INSERT INTO streaming (streaming_name, streaming_img ) VALUES ('Disney Plus', '/img/disney.jpg');
+
+INSERT INTO streaming (streaming_name, streaming_img ) VALUES ('Prime Video', '/img/prime.png');
+
+INSERT INTO streaming (streaming_name, streaming_img ) VALUES ('Hulu', '/img/hulu.jpg');
 
 
 

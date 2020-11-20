@@ -25,8 +25,23 @@
     </header>
 
     <main>
+        <h1 class="title home">Home </h1>
+        <p class="home_intro">Many times we are ready to see a movie, but we cannot find something we like. For this
+            reason, I decided to create this page where you can find recommended movies.
+            There are two search options, by category or streaming.
+            We hope you like it.
+        </p>
 
-        
+        <h2 class="search_title">Search by</h2>
+
+        <form action="/getcategory" method="GET" class="form getCatStre">
+            <input type="submit" name="submit" class="btn" value="Category">
+        </form>
+
+        <form action="/getstreaming" method="GET" class="form getCatStre ">
+            <input type="submit" name="submit" class="btn" value="Streaming">
+        </form>
+
 
     </main>
 
@@ -44,7 +59,7 @@
         </div>
     </footer>
 
-    <script src="/script.js"></script>
+    <script src="/js/script.js"></script>
 
 </body>
 

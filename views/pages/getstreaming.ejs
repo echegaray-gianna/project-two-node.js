@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <title>  Streaming </title>
+
+    <%- include('../partials/head'); %>
+
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+
+    </header>
+
+    <main>
+
+        <h1 class="categories title"> Streaming</h1>
+
+        <% streaming.forEach(function(stmg) {  %>
+
+            <form action= "/getmovie" method="GET" class="form getmovies">
+            
+                <h3 class="category title">
+                    <%= stmg.streaming_name %>
+                </h3>
+                <img src="<%= stmg.streaming_img %>" alt="Streaming Company" class="stmg_img">
+
+                <input hidden name= "category_id" value = "<%=stmg.streaming_id %>">
+                <input type="submit" name="submit" class="btn" value="See Movies">
+            </form>
+
+        <% }); %>
+
+
+
+    </main>
+
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
