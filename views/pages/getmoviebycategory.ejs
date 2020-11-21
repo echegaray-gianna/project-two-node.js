@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <title> Categories </title>
+
+    <%- include('../partials/head'); %>
+
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+
+    </header>
+
+    <main>
+
+        <h1 class="movies_title"> Movies</h1>
+
+        <% moviecat.forEach(function(movies) {  %>
+
+        <form action="/getmovie" method="GET" class="form getmovies">
+
+            <div class="get_movies">
+                <img src="<%= movies.movie_img %>" alt="Movie Picture" class="movie_img">
+                <h3 class="movies_subtitle">
+                    <%= movies.movie_name %>
+                </h3>
+ 
+            </div>
+
+                <input hidden name="movie_id" value="<%=movies.movie_id %>">
+                <input type="submit" name="submit" class="btn" value="See Movies">
+        </form>
+
+        <% }); %>
+
+
+
+    </main>
+
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

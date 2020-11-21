@@ -18,18 +18,18 @@
 
     <main>
 
-        <h1 class="categories title"> Streaming</h1>
+        <h1 class="streaming title"> Streaming</h1>
 
         <% streaming.forEach(function(stmg) {  %>
 
-            <form action= "/getmovie" method="GET" class="form getmovies">
+            <form action= "/getmoviebystreaming" method="GET" class="form getmovies">
             
-                <h3 class="category title">
+                <h3 class="streaming subtitle">
                     <%= stmg.streaming_name %>
                 </h3>
                 <img src="<%= stmg.streaming_img %>" alt="Streaming Company" class="stmg_img">
 
-                <input hidden name= "category_id" value = "<%=stmg.streaming_id %>">
+                <input hidden name= "streaming_id" value = "<%=stmg.streaming_id %>">
                 <input type="submit" name="submit" class="btn" value="See Movies">
             </form>
 
