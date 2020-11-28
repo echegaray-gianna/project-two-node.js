@@ -1,27 +1,429 @@
-.jumbotron {
-  background: #532F8C;
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500&family=Fira+Sans:wght@700&family=Pacifico&display=swap');
+
+/************ Size  *************/
+body {
+  margin: 5%;
+  margin: auto;
+  border: 2px solid black;
+  background-color: rgba(9, 9, 121, 1);
   color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }
+}
+
+.body_text {
+  max-width: 90%;
+  margin-left: 3%;
+}
+
+/********** Main Logo************/
+.container-logo a {
+  text-decoration: none;
+}
+
+.logo {
+  padding: 50px;
+  text-align: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+  font-size: 30px;
+}
+
+
+/************ Footer  *************/
+
+footer {
+  margin-top: 12%;
+}
+
+.container-footer {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+.footer-bar {
+  margin-top: 2%;
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/************ Nav  *************/
+
+.nav-container {
+  margin: 0;
+}
+
+.nav-info {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+.nav-info li {
+  float: center;
+  border-right: 1px solid #bbb;
+}
+
+.nav-info li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav {
+  margin-top: 3%;
+}
+
+a.nav-link {
+  font-size: 26px;
+  color: black;
+}
+
+
+a.nav-link:hover {
+  background: rgba(9, 9, 121, 1) 35%;
+  color: white;
+  font-size: 28px;
+  border: solid 2px black;
+}
+
+
+a.nav-link:active {
+  background-color: #00d4ff;
+  border: solid 1px black;
+}
+
+
+/************ Carussel  *************/
+
+.w-100 {
+  width: 100% !important;
+  height: 80%;
+}
+
+
+/************ Text  *************/
+
+body {
+  font-family: 'David Libre', serif;
+}
+
+h1 {
+  margin-top: 3%;
+  font-size: 40px;
+  margin-bottom: 2%;
+}
+
+h2 {
+  margin-top: 5%;
+  font-size: 30px;
+  margin-bottom: 2%;
+  margin-left: 8%;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 25px;
+}
+
+h6 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+/********************************/
+/************ HOME  *************/
+/********************************/
+
+/************ Intro Text *************/
+
+.home_intro {
+  width: 90%;
+  margin-left: 6%;
+}
+
+/************ Search a sprecofoc movie  *************/
+
+#search_movie {
+  margin-left: 17%;
+  margin-top: 2%;
+  width: 40%;
+  height: 35px;
+  padding-left: 1%;
+}
+
+.moviename {
+  background-color: rgb(17, 17, 255);
+  color: white;
+  font-size: 18px;
+  border: 1px solid black;
+}
+
+
+.moviename:hover {
+  background: rgb(54, 215, 247) 100%;
+  color: white;
+  font-size: 24px;
+  border: solid 2px black;
+}
+
+
+.moviename:active {
+  background-color: #00d4ff;
+  border: solid 1px black;
+}
+
+
+.no_info {
+  margin-left: 8%;
+  margin-top: 3%;
+}
+
+
+/************ specif movie  *************/
+#movie_result {
+  margin-top: 5%;
+  margin-left: 13%;
+}
+
+#movie_result img {
+  float: left;
+  width: 27%;
+  padding-right: 3%;
+  padding-bottom: 1%;
+}
+
+.movie_subtitle_search {
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 36px ;
+}
+
+#movie_result a {
+  border: 2px solid rgb(81, 106, 247);
+  padding: 1%;
+  font-size: 22px;
+  margin-bottom: 1%;
+  background-color: rgb(17, 17, 255);
+  color: white;
+
+}
+
+#movie_result span, .movie_container span  {
+  border-bottom: 2px solid;
+}
+
+.streaming_info {
+  margin-bottom: 3.5%;
+}
+
+.actors {
+  margin-top: 3%;
+}
+
+
+/************ Search by  *************/
+.searchby_container {
+  margin-top: 5%;
+  margin-right: 10%;
+  margin-left: 17%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+.btn_category_search {
+  color: white;
+  background-color: rgb(17, 17, 255);
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: 22px;
+  padding: 8%;
+}
+
+.btn_streaming_search {
+  color: white;
+  background-color: rgb(17, 17, 255);
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: 22px;
+  padding: 8%;
+}
+
+.btn_streaming_search:hover {
+  background: rgb(54, 215, 247) 100%;
+  color: white;
+  font-size: 28px;
+  border: solid 2px black;
+}
+
+.btn_category_search:hover {
+  background: rgb(54, 215, 247) 100%;
+  color: white;
+  font-size: 28px;
+  border: solid 2px black;
+}
+
+.btn_streaming_search:active {
+  border: solid 3px black;
+}
+
+.btn_category_search:active {
+  border: solid 3px black;
+
+}
+
+
+/********************************/
+/******* Get BY Category ********/
+/********************************/
+
+.get_cat_str_container {
+  margin: 5% 10% 25% 25%;
+  display: grid;
+  grid-template-columns: 30% 30%;
+  align-items: center;
+  grid-gap: 10%;
+}
+
+.getmovies{
+  text-align: center;
+}
+
+.get_cat_str_subtitle {
+  color: white;
+  background-color: #333;
+  border: 1px solid black;
+  font-size: 22px;
+  padding: 20% 1%;
+  text-align: center;
+  font-size: 26px;
+}
+
+.get_cat_str {
+  color: white;
+  background-color: rgb(17, 17, 255);
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 22px;
+  padding: 3% 25%;
+  text-align: center;
+}
+
+.get_cat_str:hover{
+  background: rgb(54, 215, 247) 100%;
+  color: white;
+  font-size: 26px;
+  border: solid 2px black;
+}
+
+
+/********************************/
+/******* Get BY Streaming ******/
+/********************************/
+.get_cat_str_subcontainer img{
+  width: 50%;
+}
+
+.get_cat_str_subcontainer{
+  color: white;
+  background-color: #333;
+  border: 1px solid black;
+  font-size: 22px;
+  padding: 20% 1%;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 4%;
+}
+
+.streaming_subtitle {
+  margin-bottom: 5%;
+}
+
+
+.get_movies_container{
+  color: white;
+  background-color: #333;
+  border: 1px solid black;
+  font-size: 22px;
+  padding: 18% 1% 10% 1%;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 5%;
+}
+
+.get_movies_container img{
+  width: 50%;
+}
+
+.movies_subtitle{
+  margin-top: 5%;
+  text-transform: capitalize;
+}
+
+
+/********************************/
+/********* Get BY Movie ********/
+/********************************/
+
+.movie_container {
+  margin-top: 3%;
+}
+.movie_container img {
+  float: left;
+  margin-right: 3%;
+  margin-bottom: 1%;
+
+  
+}
+
+.movie_subtitle {
+  text-transform: capitalize;
+  font-size: 45px;
+}
+
+
+.movie_container a {
+  border: 2px solid rgb(81, 106, 247);
+  padding: 1%;
+  font-size: 22px;
+  margin-bottom: 1%;
+  background-color: rgb(17, 17, 255);
+  color: white;
+  text-decoration: none;
+
+}
+
+.movie_container a:hover{
+  background: rgb(54, 215, 247) 100%;
+  color: white;
+  font-size: 24px;
+  border: solid 2px black;
+}
+
+
+
+
+
+
 

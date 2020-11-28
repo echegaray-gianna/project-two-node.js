@@ -18,28 +18,31 @@
 
     <main>
 
-        <h1 class="movies_title"> Movies</h1>
+        <div class="body_text">
+            <h1 class="streaming title"> Movies</h1>
 
-        <% moviestr.forEach(function(movies) {  %>
+            <div class="get_cat_str_container">
 
-        <form action="/getmovie" method="GET" class="form getmovies">
+                <% moviestr.forEach(function(movies) {  %>
 
-            <div class="get_movies">
-                <img src="<%= movies.movie_img %>" alt="Movie Picture" class="movie_img">
-                <h3 class="movies_subtitle">
-                    <%= movies.movie_name %>
-                </h3>
- 
+                <form action="/getmovie" method="GET" class="form getmovies">
+
+                    <div class="get_movies_container">
+                        <img src="<%= movies.movie_img %>" alt="Movie Picture" class="movie_img">
+                        <h3 class="movies_subtitle">
+                            <%= movies.movie_name %>
+                        </h3>
+
+                    </div>
+
+                    <input hidden name="movie_id" value="<%=movies.movie_id %>">
+                    <input type="submit" name="submit" class="btn get_cat_str" value="See Movies">
+                </form>
+
+                <% }); %>
             </div>
 
-                <input hidden name="movie_id" value="<%=movies.movie_id %>">
-                <input type="submit" name="submit" class="btn" value="See Movies">
-        </form>
-
-        <% }); %>
-
-
-
+        </div>
     </main>
 
 

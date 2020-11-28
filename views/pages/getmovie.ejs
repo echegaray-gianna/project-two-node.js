@@ -10,40 +10,40 @@
 </head>
 
 <body>
-
+   
     <header>
         <%- include('../partials/header'); %>
 
     </header>
 
     <main>
-
-        <h1 class="movie_title"> Movies</h1>
+        <div class="body_text">
+        
+        <h1 class="movie title"> Movies</h1>
 
         <% movieinfo.forEach(function(movie) {  %>
 
-        <div class="movie">
+        <div class="movie_container">
+            
             <img src="<%= movie.movie_img %>" alt="Movie Picture" class="movie_img">
             <h3 class="movie_subtitle">
                 <%= movie.movie_name %>
             </h3>
             <p class="date"><%= movie.movie_date %></p>
-            <p class="duration"> duration <%= movie.movie_duration %> </p>
+            <p class="duration"> <span>Duration</span>: <%= movie.movie_duration %> </p>
+            <p class="category_info"> <span> Category</span>:  <%= movie.category_name %> </p>
+            <p class="streaming_info"> <span> Streaming at</span>:  <%= movie.streaming_name %> </p>
             <a href="<%= movie.movie_trailer %>" target="_blank"> Play trailer on YouTube</a>
-            <p class="actors"> Actors: <%= movie.movie_actors %> </p>
-            <p class="actors"> <%= movie.movie_description %> </p>
-
-
-
+            <p class="actors"> <span> Actors</span>: <%= movie.movie_actors %> </p>
+            <p class="description"> <%= movie.movie_description %> </p>
 
         </div>
 
-
         <% }); %>
 
-
-
+        </div>
     </main>
+
 
 
     <footer>

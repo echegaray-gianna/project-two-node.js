@@ -128,4 +128,25 @@ INSERT INTO movie(
 
     --DONE ^^^^^
 
+    UPDATE movie SET movie_name = 'the lion king' WHERE movie_id = 1;
 
+    UPDATE movie SET movie_name = 'beauty and the beast' WHERE movie_id = 2;
+
+    UPDATE movie SET movie_name = 'onward' WHERE movie_id = 3;
+
+    UPDATE movie SET movie_name = 'spider-man: into the spider-verse' WHERE movie_id = 4;
+
+    UPDATE movie SET movie_name = 'gemini man' WHERE movie_id = 5;
+
+    UPDATE movie SET movie_name = 'suits' WHERE movie_id = 6;
+
+    UPDATE movie SET movie_name = 'the social dilemma' WHERE movie_id = 7;
+ --DONE ^^^^^
+
+    INSERT INTO movie(
+    movie_img, movie_name, movie_date, movie_trailer, movie_actors, movie_duration, movie_description, category_id, streaming_id)
+    VALUES ('/img/hitch.jpg', 'hitch', '2005-02-11', 'https://www.youtube.com/watch?v=dMaq_pfxs-0',
+    'Eva Mendez, Will Smith, Amber Valletta, Kevin James, Paula Patton', '01:58:00', 
+    'Dating coach Alex "Hitch" Hitchens (Will Smith) mentors a bumbling client, Albert (Kevin James), who hopes to win the heart of the glamorous Allegra Cole (Amber Valletta). While Albert makes progress, Hitchens faces his own romantic setbacks when proven techniques fail to work on Sara Melas (Eva Mendes), a tabloid reporter digging for dirt on Allegra Cole"s love life. When Sara discovers Hitchens" connection to Albert -- now Allegra"s boyfriend -- it threatens to destroy both relationships.',
+    '4', '1');
+--DONE ^^^^^

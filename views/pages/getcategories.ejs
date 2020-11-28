@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>  Categories </title>
+    <title> Categories </title>
 
     <%- include('../partials/head'); %>
 
@@ -18,23 +18,24 @@
 
     <main>
 
-        <h1 class="categories title"> Categories</h1>
+        <div class="body_text">
+            <h1 class="categories title"> Categories</h1>
 
-        <% categories.forEach(function(category) {  %>
+            <div class="get_cat_str_container">
+                <% categories.forEach(function(category) {  %>
 
-            <form action= "/getmoviebycategory" method="GET" class="form getmovies">
-            
-                <h3 class="category subtitle">
-                    <%= category.category_name %>
-                </h3>
+                <form action="/getmoviebycategory" method="GET" class="form getmovies">
+                    <h3 class="get_cat_str_subtitle">
+                        <%= category.category_name %>
+                    </h3>
+                    <input hidden name="category_id" value="<%=category.category_id %>">
+                    <input type="submit" name="submit" class="btn get_cat_str" value="See Movies">
+                </form>
 
-                <input hidden name= "category_id" value = "<%=category.category_id %>">
-                <input type="submit" name="submit" class="btn" value="See Movies">
-            </form>
+                <% }); %>
+            </div>
 
-        <% }); %>
-
-
+        </div>
 
     </main>
 
@@ -48,4 +49,3 @@
 </body>
 
 </html>
-

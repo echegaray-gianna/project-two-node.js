@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>  Streaming </title>
+    <title> Streaming </title>
 
     <%- include('../partials/head'); %>
 
@@ -17,26 +17,33 @@
     </header>
 
     <main>
+        <div class="body_text">
 
-        <h1 class="streaming title"> Streaming</h1>
+            <h1 class="streaming title"> Streaming</h1>
 
-        <% streaming.forEach(function(stmg) {  %>
+            <div class="get_cat_str_container">
 
-            <form action= "/getmoviebystreaming" method="GET" class="form getmovies">
-            
-                <h3 class="streaming subtitle">
-                    <%= stmg.streaming_name %>
-                </h3>
-                <img src="<%= stmg.streaming_img %>" alt="Streaming Company" class="stmg_img">
+                <% streaming.forEach(function(stmg) {  %>
 
-                <input hidden name= "streaming_id" value = "<%=stmg.streaming_id %>">
-                <input type="submit" name="submit" class="btn" value="See Movies">
-            </form>
+                <form action="/getmoviebystreaming" method="GET" class="form getmovies">
 
-        <% }); %>
+                    <div class="get_cat_str_subcontainer">
+                        <h3 class="streaming_subtitle">
+                            <%= stmg.streaming_name %>
+                        </h3>
 
+                        <img src="<%= stmg.streaming_img %>" alt="Streaming Company" class="stmg_img">
 
+                    </div>
 
+                    <input hidden name="streaming_id" value="<%=stmg.streaming_id %>">
+                    <input type="submit" name="submit" class="btn get_cat_str" value="See Movies">
+                </form>
+
+                <% }); %>
+            </div>
+
+        </div>
     </main>
 
 
