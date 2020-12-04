@@ -51,6 +51,7 @@ function getmovie(req, res) {
 function searchmoviebyname(req, res){
     console.log("getting movies by search information ");
 
+
     const movie_name = (req.query.search_movie).toLowerCase().trim();
     
     var searchmoviebynameFromDb = mds_movie.searchmoviebynameFromDb;

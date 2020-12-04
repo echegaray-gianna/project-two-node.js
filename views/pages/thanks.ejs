@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <title> Movie Info </title>
+
+    <%- include('../partials/head'); %>
+
+    <script src="js/review_clientside.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+
+    </header>
+
+    <main>
+        <div class="body_text">
+            <h3 class="thanks">Thanks for your review.</h3> 
+            <form action="/getmovie" method="GET" class="form getCatStre ">
+                <input hidden name="movie_id" value="<%= review_movie_id %>">
+                <input type="submit" name="submit" class="btn streaming_search" value="Go Back">
+            </form>
+        </div>
+
+            
+
+    </main>
+
+
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

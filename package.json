@@ -11,8 +11,11 @@
     "test": "node test.js"
   },
   "dependencies": {
+    "@google-cloud/pubsub": "^2.6.0",
+    "body-parser": "^1.19.0",
     "ejs": "^2.7.4",
     "express": "^4.15.2",
+    "express-validator": "^6.7.0",
     "pg": "^8.5.1"
   },
   "devDependencies": {

@@ -64,6 +64,9 @@ function searchmoviebynameFromDb(movie_name, callback) {
 }
 
 
+
+
+//"SELECT movie.*, category.category_name, streaming.streaming_name, review.* FROM movie INNER JOIN category ON movie.category_id = category.category_id INNER JOIN streaming ON movie.streaming_id = streaming.streaming_id INNER JOIN review ON movie.movie_id = review.movie_id WHERE movie.movie_id = $1::int ";
 ///////////////////////////////////////
 /////////// Module Exports ////////////
 ///////////////////////////////////////

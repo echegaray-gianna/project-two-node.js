@@ -172,7 +172,7 @@ p {
   padding-left: 1%;
 }
 
-.moviename {
+.movie_search_name {
   background-color: rgb(17, 17, 255);
   color: white;
   font-size: 18px;
@@ -180,7 +180,7 @@ p {
 }
 
 
-.moviename:hover {
+.movie_search_name:hover {
   background: rgb(54, 215, 247) 100%;
   color: white;
   font-size: 24px;
@@ -188,7 +188,7 @@ p {
 }
 
 
-.moviename:active {
+.movie_search_name:active {
   background-color: #00d4ff;
   border: solid 1px black;
 }
@@ -423,7 +423,102 @@ p {
 
 
 
+/********************************/
+/********* Review Movie ********/
+/********************************/
+.review_title{
+  margin-left: 0%;
+}
+
+.review_container{
+  margin-left: 5%;
+}
+
+.getReview{
+  margin-left: 10%;
+  margin-top: 2%;
+  font-size: 20px;
+}
+
+#review_leave {
+  width: 40%;
+}
+
+.post_review {
+  color: white;
+  border: 2px solid rgb(81, 106, 247);
+  padding: .5%;
+  font-size: 20px;
+  background-color: rgb(17, 17, 255);
+}
+
+.post_review:hover{
+  background: rgb(54, 215, 247) 100%;
+  color: white;
+  font-size: 24px;
+  border: solid 2px black;
+}
 
 
+.moviename {
+  background-color: rgb(17, 17, 255);
+  color: white;
+  font-size: 18px;
+  border: 1px solid black;
+  margin-top: 2%;
+  font-size: 20px;
+}
 
 
+.moviename:hover {
+  background: rgb(54, 215, 247) 100%;
+  color: white;
+  font-size: 24px;
+  border: solid 2px black;
+}
+
+
+.moviename:active {
+  background-color: #00d4ff;
+  border: solid 1px black;
+}
+
+
+/************ Review List *************/
+
+.review_list_container{
+  margin-top: 2%;
+  margin-left: 10%;
+}
+
+#review_result li {
+  margin-top: 1%;
+  font-size: 20px;
+}
+
+/********************************/
+/*********   Thanks     ********/
+/********************************/
+
+.thanks{
+  margin-top: 5%;
+  margin-left: 10%;
+  font-size: 28px;
+}
+
+.streaming_search{
+  color: white;
+  border: 2px solid rgb(81, 106, 247);
+  padding: .5%;
+  font-size: 20px;
+  background-color: rgb(17, 17, 255);
+  margin-left:  10%;
+  margin-top: 2%;
+}
+
+.streaming_search:hover{
+  background: rgb(54, 215, 247) 100%;
+  color: white;
+  font-size: 24px;
+  border: solid 2px black;
+}

@@ -3,14 +3,19 @@
 
 <head>
 
-    <title> Categories </title>
+    <title> Movie Info </title>
 
     <%- include('../partials/head'); %>
+
+    <script src="js/review_clientside.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 
 </head>
 
 <body>
-   
+
     <header>
         <%- include('../partials/header'); %>
 
@@ -18,30 +23,53 @@
 
     <main>
         <div class="body_text">
-        
-        <h1 class="movie title"> Movies</h1>
 
-        <% movieinfo.forEach(function(movie) {  %>
+            <h1 class="movie title"> Movies</h1>
 
-        <div class="movie_container">
+            <% movieinfo.forEach(function(movie) {  %>
+
+            <div class="movie_container">
+
+                <img src="<%= movie.movie_img %>" alt="Movie Picture" class="movie_img">
+                <h3 class="movie_subtitle" id="movie_name">
+                    <%= movie.movie_name %>
+                </h3>
+                <p class="date"><%= movie.movie_date %></p>
+                <p class="duration"> <span>Duration</span>: <%= movie.movie_duration %> </p>
+                <p class="category_info"> <span> Category</span>: <%= movie.category_name %> </p>
+                <p class="streaming_info"> <span> Streaming at</span>: <%= movie.streaming_name %> </p>
+                <a href="<%= movie.movie_trailer %>" target="_blank"> Play trailer on YouTube</a>
+                <p class="actors"> <span> Actors</span>: <%= movie.movie_actors %> </p>
+                <p class="description"> <%= movie.movie_description %> </p>
+
+            </div>
+
+            <h2 class="review_title"> Review </h2>
+            <div class="review_container">
+                <h3 class="review_leave_title">What did you think of this movie? </h3>
+
+                <form action="/postreview" method="GET" class="form getReview">
+                    <input type="text" id="review_leave" name="review_leave"  placeholder="Enter your review here ..." required>
+                    <input type="hidden" id="movie_info_for_review" name="movie_info_for_review" value="<%=movie.movie_id %>">
+                    <input type="submit" name="submit" class="btn post_review" value="Post your Review">
+                </form>
+
+                <% }); %>
             
-            <img src="<%= movie.movie_img %>" alt="Movie Picture" class="movie_img">
-            <h3 class="movie_subtitle">
-                <%= movie.movie_name %>
-            </h3>
-            <p class="date"><%= movie.movie_date %></p>
-            <p class="duration"> <span>Duration</span>: <%= movie.movie_duration %> </p>
-            <p class="category_info"> <span> Category</span>:  <%= movie.category_name %> </p>
-            <p class="streaming_info"> <span> Streaming at</span>:  <%= movie.streaming_name %> </p>
-            <a href="<%= movie.movie_trailer %>" target="_blank"> Play trailer on YouTube</a>
-            <p class="actors"> <span> Actors</span>: <%= movie.movie_actors %> </p>
-            <p class="description"> <%= movie.movie_description %> </p>
+                <button class="btn moviename" onclick="see_reviews()">See all reviews </button>
+
+            </div>
+
+            <div class="review_list_container">
+                <ul id="review_result">
+
+                </ul>
+
+            </div>
+
 
         </div>
 
-        <% }); %>
-
-        </div>
     </main>
 
 

@@ -150,3 +150,9 @@ INSERT INTO movie(
     'Dating coach Alex "Hitch" Hitchens (Will Smith) mentors a bumbling client, Albert (Kevin James), who hopes to win the heart of the glamorous Allegra Cole (Amber Valletta). While Albert makes progress, Hitchens faces his own romantic setbacks when proven techniques fail to work on Sara Melas (Eva Mendes), a tabloid reporter digging for dirt on Allegra Cole"s love life. When Sara discovers Hitchens" connection to Albert -- now Allegra"s boyfriend -- it threatens to destroy both relationships.',
     '4', '1');
 --DONE ^^^^^
+
+    ALTER TABLE review ALTER COLUMN review_date SET DATA TYPE timestamp;
+
+    ALTER TABLE review ALTER COLUMN review_date SET DEFAULT current_timestamp;
+
+    INSERT INTO review  (review_description, movie_id) VALUES ('Great movie', '1');

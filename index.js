@@ -47,6 +47,9 @@ const ctrs_streaming = require('./controllers/ctrs_streaming');
 // ctrs_streaming.js Access
 const ctrs_movie = require('./controllers/ctrs_movie')
 
+// ctrs_review.js Access
+const ctrs_review = require('./controllers/ctrs_review')
+
 ////////////////////////////////////////
 ////// GET Functions From Ctrs /////////
 ///////////////////////////////////////
@@ -54,7 +57,7 @@ const ctrs_movie = require('./controllers/ctrs_movie')
 //Get the getcategory function from ctrs_category.js
 app.post('/getcategory', ctrs_category.getcategory);
 
-//Get the getstreaming function from ctrs_category.js
+//Get the getstreaming function from ctrs_streaming.js
 app.post('/getstreaming', ctrs_streaming.getstreaming);
 
 //Get the getmoviebycategory function from ctrs_category.js
@@ -63,10 +66,16 @@ app.get('/getmoviebycategory', ctrs_category.getmoviebycategory);
 //Get the getmoviebystreaming function from ctrs_streaming.js
 app.get('/getmoviebystreaming', ctrs_streaming.getmoviebystreaming);
 
-//Get the getmovie function from ctrs_streaming.js
+//Get the getmovie function from ctrs_movie.js
 app.get('/getmovie', ctrs_movie.getmovie);
 
-//Get the getmovie function from ctrs_streaming.js
+//Get the getmovie function from ctrs_movie.js
 app.get('/searchmoviebyname', ctrs_movie.searchmoviebyname);
+
+//Get the getmovie function from ctrs_review.js
+app.get('/getreview', ctrs_review.getreview);
+
+//Get the getmovie function from ctrs_review.js
+app.get('/postreview', ctrs_review.postreview);
 
 

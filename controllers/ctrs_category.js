@@ -1,12 +1,12 @@
 ////////////////////////////////////////
-////// Models Connections /////////
+///////// Models Connections //////////
 ///////////////////////////////////////
 
 // mds_category.js Access
 const mds_category = require('../models/mds_category');
 
 ////////////////////////////////////////
-//////// GET Categories view ///////////
+//////// GET Categories view //////////
 ///////////////////////////////////////
 
 function getcategory(req, res) {
@@ -70,7 +70,7 @@ function getmoviebycategory(req, res) {
 
             res.render("pages/getmoviebycategory", params)
 
-            console.log("back from the getmoviebycategoryFromDB with result:", result);
+            console.log("back from the getmoviebycategoryFromDb with result:", result);
 
 
         }
