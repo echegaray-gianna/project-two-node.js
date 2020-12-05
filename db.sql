@@ -156,3 +156,6 @@ INSERT INTO movie(
     ALTER TABLE review ALTER COLUMN review_date SET DEFAULT current_timestamp;
 
     INSERT INTO review  (review_description, movie_id) VALUES ('Great movie', '1');
+
+
+--DONE ^^^^^
