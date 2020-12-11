@@ -17,7 +17,7 @@ function getcategoryFromDb(callback) {
     console.log("get category from Db");
 
     //DB
-    var sql = "SELECT * FROM category";
+    var sql = "SELECT * FROM category ORDER BY category_name ASC";
     pool.query(sql, function (err, result) {
         if (err) {
             console.log("An error with db ocurred");
@@ -43,7 +43,7 @@ function getmoviebycategoryFromDb(category_id, callback) {
     console.log("get movies by categories from Db");
 
     //DB
-    var sql = "SELECT * FROM movie WHERE category_id = $1::int ";
+    var sql = "SELECT * FROM movie WHERE category_id = $1::int ORDER BY movie_name ASC ";
 
     var params = [category_id];
 

@@ -17,7 +17,7 @@ function getstreamingFromDb(callback) {
     console.log("get streaming from Db");
 
     //DB
-    var sql = "SELECT * FROM streaming";
+    var sql = "SELECT * FROM streaming ORDER BY streaming_name ASC";
     pool.query(sql, function (err, result) {
         if (err) {
             console.log("An error with db ocurred");
@@ -40,7 +40,7 @@ function getmoviebystreamingFromDb(streaming_id, callback) {
     console.log("get movies by streaming from Db");
 
     //DB
-    var sql = "SELECT * FROM movie WHERE streaming_id = $1::int ";
+    var sql = "SELECT * FROM movie WHERE streaming_id = $1::int ORDER BY movie_name ASC ";
 
     var params = [streaming_id];
 

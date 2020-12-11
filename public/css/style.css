@@ -33,6 +33,7 @@ body {
 
 footer {
   margin-top: 12%;
+  
 }
 
 .container-footer {
@@ -62,7 +63,7 @@ footer {
   padding: 0;
   overflow: hidden;
   background-color: #333;
-
+  
 }
 
 .nav-info li {
@@ -298,13 +299,15 @@ p {
 /******* Get BY Category ********/
 /********************************/
 
-.get_cat_str_container {
-  margin: 5% 10% 25% 25%;
-  display: grid;
-  grid-template-columns: 30% 30%;
-  align-items: center;
-  grid-gap: 10%;
-}
+.get_movies_str_container {
+  margin: 5% 10% 25% 10%;
+ display: grid;
+ grid-template-columns: 30% 30% 30%;
+ align-items: center;
+ justify-items: center;
+ grid-gap: 10%; 
+ 
+ }
 
 .getmovies{
   text-align: center;
@@ -341,6 +344,17 @@ p {
 /********************************/
 /******* Get BY Streaming ******/
 /********************************/
+
+.get_cat_str_container_two {
+  margin: 5% 10% 25% 10%;
+  padding-bottom: 25%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  align-items: center;
+  grid-gap: 10%;
+}
+
+
 .get_cat_str_subcontainer img{
   width: 50%;
 }
@@ -379,13 +393,21 @@ p {
 .movies_subtitle{
   margin-top: 5%;
   text-transform: capitalize;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 
 /********************************/
 /********* Get BY Movie ********/
 /********************************/
-
+.get_cat_str_container {
+  margin: 5% 10% 25% 25%;
+  display: grid;
+  grid-template-columns: 30% 30%;
+  align-items: center;
+  grid-gap: 10%;
+}
 .movie_container {
   margin-top: 3%;
 }
